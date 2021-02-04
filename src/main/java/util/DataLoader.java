@@ -1,12 +1,12 @@
-package com.galvanize.trivia;
+package util;
 
-import com.galvanize.trivia.answer.Answer;
-import com.galvanize.trivia.answer.AnswerRepository;
-import com.galvanize.trivia.question.Question;
-import com.galvanize.trivia.question.QuestionRepository;
+import model.Answer;
+import model.Question;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+import repository.AnswerRepository;
+import repository.QuestionRepository;
 
 @Component
 public class DataLoader implements ApplicationRunner {

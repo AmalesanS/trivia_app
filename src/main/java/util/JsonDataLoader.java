@@ -1,15 +1,16 @@
-package com.galvanize.trivia;
+package util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.galvanize.trivia.answer.Answer;
-import com.galvanize.trivia.answer.AnswerRepository;
-import com.galvanize.trivia.question.Question;
-import com.galvanize.trivia.question.QuestionRepository;
+
+import model.Answer;
+import model.Question;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
+import repository.AnswerRepository;
+import repository.QuestionRepository;
 
 import java.io.IOException;
 import java.nio.file.Files;
