@@ -1,22 +1,18 @@
-package model;
+package com.trivia.model;
 
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import java.time.LocalDate;
-import java.util.Arrays;
+import javax.persistence.*;
 import java.util.List;
 
 @Getter
 @Setter
 @Entity
-@Table(name = "question")
+@Table(name = "QUESTION")
 public class Question {
     @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private Integer id;
     String question;
     String timestamp;
