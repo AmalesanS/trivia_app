@@ -11772,7 +11772,7 @@ INSERT INTO answer (id, question_id, choice, text, correct)
 VALUES (2915, 1008, 'C', 'Twenty', false);
 
 INSERT INTO question (id, quiz_id, question_number, question, created_at)
-VALUES (1009, 86, 10, 'Who was NOT a model for Grant Wood’s painting American Gothic?', '2018-04-06 01:11:12');
+VALUES (1009, 86, 10, 'Who was NOT a com.trivia.model for Grant Wood’s painting American Gothic?', '2018-04-06 01:11:12');
 
 INSERT INTO answer (id, question_id, choice, text, correct)
 VALUES (2916, 1009, 'A', 'Wood"s grocer', true);
@@ -14772,7 +14772,7 @@ INSERT INTO answer (id, question_id, choice, text, correct)
 VALUES (3657, 1266, 'C', 'Albino alligator', false);
 
 INSERT INTO question (id, quiz_id, question_number, question, created_at)
-VALUES (1267, 108, 4, 'The camera was first featured in which iPhone model?', '2018-04-23 19:06:01');
+VALUES (1267, 108, 4, 'The camera was first featured in which iPhone com.trivia.model?', '2018-04-23 19:06:01');
 
 INSERT INTO answer (id, question_id, choice, text, correct)
 VALUES (3658, 1267, 'A', 'iPhone 3GS', false);

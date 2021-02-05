@@ -1,12 +1,12 @@
-package com.galvanize.trivia;
+package com.trivia.util;
 
-import com.galvanize.trivia.answer.Answer;
-import com.galvanize.trivia.answer.AnswerRepository;
-import com.galvanize.trivia.question.Question;
-import com.galvanize.trivia.question.QuestionRepository;
+import com.trivia.model.Answer;
+import com.trivia.model.Question;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
+import com.trivia.repository.AnswerRepository;
+import com.trivia.repository.QuestionRepository;
 
 @Component
 public class DataLoader implements ApplicationRunner {
@@ -11550,7 +11550,7 @@ public class DataLoader implements ApplicationRunner {
   private void saveQuestion1009() {
     Question question;
 
-    question = questionRepository.save(new Question(10, "Who was NOT a model for Grant Wood’s painting American Gothic?", "2018-04-06 01:11:12"));
+    question = questionRepository.save(new Question(10, "Who was NOT a com.trivia.model for Grant Wood’s painting American Gothic?", "2018-04-06 01:11:12"));
 
     answerRepository.save(new Answer(question, 'A', "Wood's grocer", true));
     answerRepository.save(new Answer(question, 'B', "Wood’s sister", false));
@@ -14098,7 +14098,7 @@ public class DataLoader implements ApplicationRunner {
   private void saveQuestion1267() {
     Question question;
 
-    question = questionRepository.save(new Question(4, "The camera was first featured in which iPhone model?", "2018-04-23 19:06:01"));
+    question = questionRepository.save(new Question(4, "The camera was first featured in which iPhone com.trivia.model?", "2018-04-23 19:06:01"));
 
     answerRepository.save(new Answer(question, 'A', "iPhone 3GS", false));
     answerRepository.save(new Answer(question, 'B', "iPhone 3G", false));
