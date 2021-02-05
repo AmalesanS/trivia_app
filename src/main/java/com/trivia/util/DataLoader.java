@@ -5,7 +5,6 @@ import com.trivia.model.Question;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
-import com.trivia.repository.AnswerRepository;
 import com.trivia.repository.QuestionRepository;
 
 @Component

@@ -17,7 +17,8 @@ public class TriviaService {
         this.questionRepository = questionRepository;
     }
 
-    public List<Question> getAllQuestions() {
-        return questionRepository.findAll();
+    public List<Question> getTenQuestions() {
+        return null;
     }
+
 }

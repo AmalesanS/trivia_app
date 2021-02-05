@@ -1,7 +1,6 @@
 package com.trivia.service;
 
 import com.trivia.model.Question;
-import com.trivia.repository.AnswerRepository;
 import com.trivia.repository.QuestionRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -24,15 +23,16 @@ class TriviaServiceTest {
     TriviaService triviaService;
 
     @Test
-    void fetchAll() {
+    void fetchAllReturnTenEntities() {
         // assemble
         Question question = new Question(1, "Question question?", "12-1-1");
         Question question2 = new Question(2, "Question question", "12-12-12");
         when(questionRepository.findAll()).thenReturn(Arrays.asList(question, question2));
 
         // act
-        List<Question> questionsReturnedFromService = triviaService.getAllQuestions();
+        List<Question> questionsReturnedFromService = triviaService.getTenQuestions();
         // assert
         assertEquals(Arrays.asList(question, question2), questionsReturnedFromService);
     }
+
 }
