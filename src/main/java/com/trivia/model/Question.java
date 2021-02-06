@@ -1,31 +1,43 @@
 package com.trivia.model;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
+@NoArgsConstructor
 public class Question {
+
+    private static SimpleDateFormat datetimeFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private Integer quiz_id;
-    private Integer question_number;
+    @GeneratedValue
+    private int id;
+
+    private int quizId;
+
+    private int questionNumber;
+
     private String question;
-    private String created_at;
-    @OneToMany
-    @JoinColumn(name = "QUESTION_ID", referencedColumnName = "ID")
+
+    private Date createdAt;
+
+    @OneToMany(mappedBy = "question", fetch = FetchType.LAZY)
     private List<Answer> answers;
 
-    public Question(int questionNumber, String questionText, String createdAt) {
-        this.question_number = questionNumber;
+    public Question(int questionNumber, String questionText, String creation) {
+        this.questionNumber = questionNumber;
         this.question = questionText;
-        this.created_at = createdAt;
+
+        try {
+            this.createdAt = datetimeFormat.parse(creation);
+        } catch(Exception e) {
+            this.createdAt = new Date();
+        }
     }
 }
